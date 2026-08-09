@@ -8,7 +8,7 @@ public class MissoesController {
 
     //GET - REQUISICAO PARA MOSTRAR MISSOES
     @GetMapping
-    public String mostratMissoes(){
+    public String listarMissoes(){
         return "Missoes listadas com sucesso";
     }
 //POST - REQUISICAO PARA CRIAR MISSAO

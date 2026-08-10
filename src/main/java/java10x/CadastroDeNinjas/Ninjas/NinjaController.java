@@ -4,6 +4,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
+
 @RestController
 @RequestMapping("/ninjas")
 public class NinjaController {
@@ -34,9 +36,9 @@ public class NinjaController {
         }
 
     //Mostrar todos os ninjas por id (Read)
-    @GetMapping("/listarID")
-    public String mostrarTodosOsNinjasPorId(){
-        return "Mostrar Ninjas por ID";
+    @GetMapping("/listar/{id}")
+    public NinjaModel listarNinjasPorId(@PathVariable Long id){
+        return ninjaService.listarNinjaPorId(id);
     }
 
     //Alterar dados dos ninjas (Update)

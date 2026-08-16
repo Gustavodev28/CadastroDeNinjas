@@ -17,12 +17,13 @@ import java.util.List;
 public class MissoesModel {
 
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private long id;
-
+    @Column(name = "ID")
+    private Long id;
+    @Column(name = "Nome_da_missao")
     private String nomeDaMissao;
-
+    @Column(name = "Dificuldade")
     private String dificuldade;
 
     //Uma missao pode ter varios ninjas
